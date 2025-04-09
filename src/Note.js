@@ -29,11 +29,12 @@ const Note = ({ note, updateNote }) => {
     const onMouseMove = (e) => moveAt(e.pageX, e.pageY);
 
     document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener(
-      "mouseup",
-      () => document.removeEventListener("mousemove", onMouseMove),
-      { once: true }
-    );
+    document.addEventListener("mouseup", () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      updateNote(note.id, { justDragged: true }); // 👈 notify drag
+    }, { once: true });
+    
+
   };
 
   return (
@@ -42,14 +43,36 @@ const Note = ({ note, updateNote }) => {
       style={{
         top: note.y,
         left: note.x,
+        backgroundColor: note.color,
         position: "absolute",
       }}
+      
     >
       <div
         className="note-header"
         onMouseDown={handleDragMouseDown}
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
+        <div className="color-buttons">
+  {["#fff8a6", "#c7f7d4", "#d0e1ff", "#f8c7ec"].map((color) => (
+    <button
+      key={color}
+      style={{
+        backgroundColor: color,
+        width: "16px",
+        height: "16px",
+        border: "1px solid #ccc",
+        marginRight: "4px",
+        cursor: "pointer",
+      }}
+      onClick={(e) => {
+        e.stopPropagation();
+        updateNote(note.id, { color });
+      }}
+    />
+  ))}
+</div>
+
         <button
           className="delete-btn"
           onClick={(e) => {

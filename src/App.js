@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Note from "./Note";
 import { v4 as uuidv4 } from "uuid";
 import "./styles.css";
@@ -9,11 +9,18 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const justDragged = useRef(false); // 👈 this tracks dragging
+
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
 
   const handleCanvasClick = (e) => {
+    if (justDragged.current) {
+      justDragged.current = false; // reset it
+      return; // prevent accidental note creation
+    }
+
     if (e.target.className !== "canvas") return;
 
     const newNote = {
@@ -21,11 +28,18 @@ function App() {
       text: "",
       x: e.clientX,
       y: e.clientY,
+      color: "#fff8a6", // default yellow
     };
+    
     setNotes([...notes, newNote]);
   };
 
   const updateNote = (id, newProps) => {
+    if (newProps.justDragged) {
+      justDragged.current = true;
+      return;
+    }
+
     if (newProps.delete) {
       setNotes(prevNotes => prevNotes.filter(note => note.id !== id));
     } else {

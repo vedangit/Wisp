@@ -38,7 +38,7 @@ This is for:
 ## Real talk
 
 Wisp is a tool I wanted and couldn’t find.  
-So I built it. Use it if it helps. Fork it if you want to make it yours.
+So I built it. Use it if it helps. Fork it if you want to make it yours. Regardless, star the repo <3
 
 ---
 
