@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Wisp 🪶
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A free-form to-do list on an open canvas. Click. Create. Drag. Done.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## What is this?
 
-### `npm start`
+Wisp is a dead-simple, no-rules to-do app where **you click anywhere to drop notes**. It's like sticky notes had a baby with your whiteboard — and then decided to be minimal and fast.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There are no lists, categories, or folders. Just a blank canvas and your thoughts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Why?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Most to-do apps ask you to fit into their system — tags, priorities, due dates, sub-tasks, whatever.  
+Wisp flips that. It’s just you and a space to think.
 
-### `npm run build`
+This is for:
+- People who like messy desks.
+- People who think spatially.
+- People who want to **just start writing** without setting up structure.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🖱 Click anywhere to create a note  
+- ✏️ Instant editing, no save button  
+- 🎨 Drag to move notes around freely  
+- 🌈 (Optional) color-coding or linking (coming soon)  
+- 🧠 Local storage — your notes stay unless you clear them  
+- 🪶 Zero onboarding. Zero clutter.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Real talk
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Wisp is a tool I wanted and couldn’t find.  
+So I built it. Use it if it helps. Fork it if you want to make it yours.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+[MIT](LICENSE)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Made with frustration & freedom.
