@@ -50,12 +50,27 @@ function App() {
       );
     }
   };
+  const isEmpty = notes.length === 0;
 
   return (
     <div className="canvas" onClick={handleCanvasClick}>
+      {isEmpty && (
+  <div className="welcome-message">
+    <h2>📝 Welcome to Wisp</h2>
+    <p>Click anywhere to add a note</p>
+    <p>Drag to move • Resize freely • Click × to delete</p>
+  </div>
+)}
+
       {notes.map(note => (
         <Note key={note.id} note={note} updateNote={updateNote} />
       ))}
+
+<div className="toolbar">
+  <button onClick={() => setNotes([])}>🗑️ Clear All</button>
+</div>
+
+      
     </div>
   );
 }

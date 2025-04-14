@@ -7,11 +7,16 @@ body {
 .canvas {
   width: 100vw;
   height: 100vh;
-  background: #fdfdfd;
   position: relative;
+  background-color: #fefefe;
+  background-image: linear-gradient(#e0e0e0 1px, transparent 1px),
+                    linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px;
   overflow: hidden;
+  font-family: sans-serif;
   cursor: crosshair;
 }
+
 
 .note {
   position: absolute;
@@ -57,4 +62,35 @@ body {
 
 .delete-btn:hover {
   color: red;
+}
+.welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #555;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.toolbar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.toolbar:hover {
+  opacity: 1;
+}
+
+.toolbar button {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
